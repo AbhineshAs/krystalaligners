@@ -179,4 +179,26 @@ document.addEventListener('DOMContentLoaded', () => {
             el.appendChild(span);
         });
     });
+
+    // 7. Contact Form WhatsApp Redirect
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            const whatsappNumber = '919656058125';
+            const text = `Hello Krystal Aligners! I would like to book a Free Scan.\n\n*Details:*\n- Name: ${name}\n- Email: ${email}\n- Phone: ${phone}\n- Message: ${message}`;
+
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+            window.open(whatsappUrl, '_blank');
+
+            // Optional: reset form after redirect
+            contactForm.reset();
+        });
+    }
 });
