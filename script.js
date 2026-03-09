@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Initial Setup
     const navbar = document.getElementById('mainNavbar');
-    const scrollTopBtn = document.getElementById('scrollTop');
+
 
     // Set initial navbar state (transparent if at top, solid if scrolled)
     // Add navbar-dark initially so text is white on hero image
@@ -23,14 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('navbar-light');
         }
 
-        // Scroll to top button visibility
-        if (window.scrollY > 500) {
-            scrollTopBtn.style.opacity = '1';
-            scrollTopBtn.style.pointerEvents = 'auto';
-        } else {
-            scrollTopBtn.style.opacity = '0';
-            scrollTopBtn.style.pointerEvents = 'none';
-        }
+
     });
 
     // 3. Smooth Scrolling for Anchor Links
@@ -62,14 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Scroll to Top action
-    scrollTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+
 
     // 4. Scroll Reveal Animation Setup using IntersectionObserver
     const revealElements = document.querySelectorAll('.reveal-up, .reveal-scale, .reveal-right, .reveal-left');
@@ -158,25 +144,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Premium Split Text Letter Hover Effects
     const splitElements = document.querySelectorAll('.display-3, .display-5, .nav-link');
     splitElements.forEach(el => {
-        // Skip elements with HTML inside (like icons)
         if (el.children.length > 0) return;
-        
+
         const text = el.textContent.trim();
         if (!text) return;
-        
+
         el.textContent = '';
         el.classList.add('split-hover-container');
-        
-        [...text].forEach((char, i) => {
-            const span = document.createElement('span');
-            span.textContent = char;
-            if (char === ' ') {
-                span.innerHTML = '&nbsp;';
+
+        const words = text.split(' ');
+        let charIndex = 0;
+
+        words.forEach((word, wordIdx) => {
+            const wordSpan = document.createElement('span');
+            wordSpan.style.display = 'inline-block';
+            wordSpan.style.whiteSpace = 'nowrap';
+
+            [...word].forEach((char) => {
+                const charSpan = document.createElement('span');
+                charSpan.textContent = char;
+                charSpan.className = 'split-char';
+                charSpan.style.transitionDelay = `${charIndex * 15}ms`;
+                wordSpan.appendChild(charSpan);
+                charIndex++;
+            });
+
+            el.appendChild(wordSpan);
+
+            // Add space between words
+            if (wordIdx < words.length - 1) {
+                const space = document.createElement('span');
+                space.innerHTML = '&nbsp;';
+                el.appendChild(space);
+                charIndex++;
             }
-            span.className = 'split-char';
-            // Stagger the animation delay for a wave effect
-            span.style.transitionDelay = `${i * 15}ms`;
-            el.appendChild(span);
         });
     });
 
