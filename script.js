@@ -149,36 +149,42 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = el.textContent.trim();
         if (!text) return;
 
-        el.textContent = '';
-        el.classList.add('split-hover-container');
+        try {
+            const fragment = document.createDocumentFragment();
+            const words = text.split(' ');
+            let charIndex = 0;
 
-        const words = text.split(' ');
-        let charIndex = 0;
+            words.forEach((word, wordIdx) => {
+                const wordSpan = document.createElement('span');
+                wordSpan.style.display = 'inline-block';
+                wordSpan.style.whiteSpace = 'nowrap';
 
-        words.forEach((word, wordIdx) => {
-            const wordSpan = document.createElement('span');
-            wordSpan.style.display = 'inline-block';
-            wordSpan.style.whiteSpace = 'nowrap';
+                [...word].forEach((char) => {
+                    const charSpan = document.createElement('span');
+                    charSpan.textContent = char;
+                    charSpan.className = 'split-char';
+                    charSpan.style.transitionDelay = `${charIndex * 15}ms`;
+                    wordSpan.appendChild(charSpan);
+                    charIndex++;
+                });
 
-            [...word].forEach((char) => {
-                const charSpan = document.createElement('span');
-                charSpan.textContent = char;
-                charSpan.className = 'split-char';
-                charSpan.style.transitionDelay = `${charIndex * 15}ms`;
-                wordSpan.appendChild(charSpan);
-                charIndex++;
+                fragment.appendChild(wordSpan);
+
+                if (wordIdx < words.length - 1) {
+                    const space = document.createElement('span');
+                    space.innerHTML = '&nbsp;';
+                    fragment.appendChild(space);
+                    charIndex++;
+                }
             });
 
-            el.appendChild(wordSpan);
-
-            // Add space between words
-            if (wordIdx < words.length - 1) {
-                const space = document.createElement('span');
-                space.innerHTML = '&nbsp;';
-                el.appendChild(space);
-                charIndex++;
-            }
-        });
+            el.textContent = '';
+            el.appendChild(fragment);
+            el.classList.add('split-hover-container');
+        } catch (err) {
+            console.error('Error splitting text:', err);
+            // If it fails, the original text remains untouched
+        }
     });
 
     // 7. Contact Form WhatsApp Redirect
