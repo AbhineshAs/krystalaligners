@@ -324,16 +324,19 @@
     </footer>
 
     <!-- Floating Contact & Scroll To Top -->
-    <div class="position-fixed bottom-0 end-0 mb-4 me-4 d-flex flex-column gap-2" style="z-index: 1000;">
-        <a href="https://wa.me/919656058125" target="_blank" class="bg-success text-white rounded-circle shadow d-flex align-items-center justify-content-center hover-scale" style="width: 55px; height: 55px; text-decoration: none;" aria-label="WhatsApp">
-            <i class="fa-brands fa-whatsapp fs-3"></i>
+    <div class="floating-container">
+        <a href="https://wa.me/919656058125" target="_blank"
+            class="floating-btn bg-success hover-scale" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
         </a>
-        <a href="tel:+918139815081" class="btn-teal text-white rounded-circle shadow d-flex align-items-center justify-content-center hover-scale" style="width: 55px; height: 55px; text-decoration: none;" aria-label="Call Us">
-            <i class="fa-solid fa-phone fs-4"></i>
+        <a href="tel:+918139815081"
+            class="floating-btn btn-teal hover-scale" aria-label="Call Us">
+            <i class="fa-solid fa-phone"></i>
         </a>
         <a href="#" id="scrollTop"
-            class="bg-dark text-white rounded-circle shadow d-flex align-items-center justify-content-center hover-scale"
-            style="width: 55px; height: 55px; opacity: 0; pointer-events: none; transition: 0.3s; text-decoration: none;" aria-label="Scroll to Top">
+            class="floating-btn bg-dark hover-scale"
+            style="opacity: 0; pointer-events: none; transition: 0.3s;"
+            aria-label="Scroll to Top">
             <i class="fa-solid fa-arrow-up border-0"></i>
         </a>
     </div>
