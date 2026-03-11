@@ -3,14 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="logo.png?v=1.2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krystal Aligners | Best Clear Aligners in Trivandrum & Kerala</title>
     <meta name="description"
         content="Krystal Aligners offers the most advanced clear aligner treatment in Trivandrum, Kerala. Get a perfect smile with our invisible braces, 3D scanning technology, and expert orthodontist supervision.">
     <meta name="keywords"
         content="Clear Aligners Trivandrum, Invisible Braces Kerala, Smile Correction Trivandrum, Orthodontix Trivandrum, Best Aligners Kerala, Krystal Aligners">
-    <link rel="canonical" href="https://krystalaligners.com/">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -77,16 +76,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Custom Styles with Cache Buster -->
+    <link rel="stylesheet" href="style.css?v=1.2">
+
+    <!-- Critical CSS Fixes (Forces immediate update on Hostinger) -->
+    <style>
+        .doctor-review-img-wrapper {
+            width: 140px !important;
+            height: 140px !important;
+            margin: 0 auto 1.5rem !important;
+            overflow: hidden !important;
+            border-radius: 50% !important;
+        }
+
+        .doctor-review-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border-radius: 50% !important;
+        }
+
+        /* Prevent Hero Text from breaking awkwardly */
+        .display-3 {
+            word-wrap: normal !important;
+            overflow-wrap: normal !important;
+            white-space: normal !important;
+        }
+
+        .display-3 span {
+            display: inline-block !important;
+        }
+    </style>
 </head>
 
 <body class="fade-in-page">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="logo.png" alt="Krystal Aligners Logo" style="height: 65px; border-radius: 50%;">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="logo.png" alt="Krystal Aligners Logo" class="brand-logo-img me-2">
+                <span class="fw-bold brand-text">Krystal Aligners</span>
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav">
@@ -109,12 +138,12 @@
     <section id="home" class="hero-section d-flex align-items-center position-relative">
         <div class="container position-relative z-1 text-center text-md-start">
             <div class="row">
-                <div class="col-lg-8 text-white">
+                <div class="col-lg-8 text-white reveal-up">
                     <div class="glass-panel p-5 rounded-5 shadow-lg animate-float"
                         style="border-top: 1px solid rgba(255,255,255,0.4); border-left: 1px solid rgba(255,255,255,0.2);">
                         <div class="d-inline-block bg-white bg-opacity-25 rounded-pill px-4 py-2 mb-4 text-uppercase tracking-wide small fw-bold shadow-sm backdrop-blur"
                             style="backdrop-filter: blur(5px);">
-                            <i class="fa-solid fa-gem me-2 text-info"></i> Premium Clear Aligners
+                            <i class="fa-solid fa-gem me-2 text-info"></i> Krystal Aligners
                         </div>
                         <h1 class="display-3 fw-bold mb-4">Transform Your Smile with Clear Aligners</h1>
                         <p class="lead mb-5 fw-light" style="color: rgba(255,255,255,0.85);">Invisible braces for
@@ -145,7 +174,7 @@
         <div class="bg-circle bg-circle-2"></div>
 
         <div class="container py-5 position-relative z-1">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-up">
                 <span class="text-light font-monospace text-uppercase small fw-bold tracking-wide">Comprehensive
                     Care</span>
                 <h2 class="display-5 fw-bold mt-2">Our Services</h2>
@@ -154,7 +183,7 @@
             </div>
 
             <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal-up">
                     <div
                         class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-white border-opacity-25 hover-lift backdrop-blur d-flex flex-column align-items-center text-center">
                         <div class="step-icon-bg bg-white text-teal rounded-circle d-flex align-items-center justify-content-center mb-4 shadow-sm"
@@ -167,20 +196,20 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4" style="transition-delay: 100ms;">
+                <div class="col-md-6 col-lg-4 reveal-up" style="transition-delay: 100ms;">
                     <div
                         class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-white border-opacity-25 hover-lift backdrop-blur d-flex flex-column align-items-center text-center">
                         <div class="step-icon-bg bg-white text-teal rounded-circle d-flex align-items-center justify-content-center mb-4 shadow-sm"
                             style="width: 80px; height: 80px; font-size: 2rem;">
                             <i class="fa-solid fa-laptop-medical"></i>
                         </div>
-                        <h5 class="fw-bold">Expert Examination</h5>
+                        <h5 class="fw-bold text-white">Expert Examination</h5>
                         <p class="small text-white-50 mb-0">Thorough pretreatment examinations and highly accurate 3D
                             scans performed exclusively by our expert doctors.</p>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4" style="transition-delay: 200ms;">
+                <div class="col-md-6 col-lg-4 reveal-up" style="transition-delay: 200ms;">
                     <div
                         class="bg-white bg-opacity-10 p-4 rounded-4 h-100 border border-white border-opacity-25 hover-lift backdrop-blur d-flex flex-column align-items-center text-center">
                         <div class="step-icon-bg bg-white text-teal rounded-circle d-flex align-items-center justify-content-center mb-4 shadow-sm"
@@ -231,7 +260,7 @@
             </div>
 
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 reveal-up">
                     <div class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex gap-3 hover-lift">
                         <div class="icon-square bg-blue-light text-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                             style="width: 60px; height: 60px; font-size: 1.5rem;">
@@ -244,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" style="transition-delay: 100ms;">
+                <div class="col-md-6 col-lg-4 reveal-up" style="transition-delay: 100ms;">
                     <div class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex gap-3 hover-lift">
                         <div class="icon-square bg-blue-light text-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                             style="width: 60px; height: 60px; font-size: 1.5rem;">
@@ -257,7 +286,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" style="transition-delay: 200ms;">
+                <div class="col-md-6 col-lg-4 reveal-up" style="transition-delay: 200ms;">
                     <div class="bg-white p-4 rounded-4 shadow-sm h-100 d-flex gap-3 hover-lift">
                         <div class="icon-square bg-blue-light text-teal rounded-3 d-flex align-items-center justify-content-center flex-shrink-0"
                             style="width: 60px; height: 60px; font-size: 1.5rem;">
@@ -318,7 +347,7 @@
     <section id="showcase" class="py-6 bg-white overflow-hidden">
         <div class="container py-5">
             <div class="row align-items-center g-5">
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-left">
                     <span class="text-teal font-monospace text-uppercase small fw-bold tracking-wide">Premium
                         Quality</span>
                     <h2 class="display-5 fw-bold mt-2 mb-4 text-dark">Krystal Clear Aligners</h2>
@@ -349,7 +378,7 @@
                             <i class="fa-solid fa-check text-teal mt-1 me-3 bg-teal bg-opacity-10 rounded-circle p-2"
                                 style="font-size: 0.8rem;"></i>
                             <div>
-                                <h6 class="fw-bold mb-1">Predictable Results (before you start treatment)</h6>
+                                <h6 class="fw-bold mb-1">Predictable Results(before you start treatment)</h6>
                                 <p class="text-muted small mb-0">See your entire treatment plan in 3D before you even
                                     begin.</p>
                             </div>
@@ -359,7 +388,7 @@
                     <a href="about.html" class="btn btn-outline-teal rounded-pill px-5 hover-scale">Discover the
                         Technology</a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 reveal-right">
                     <div class="position-relative p-3">
                         <!-- Decorative background element -->
                         <div class="position-absolute border border-teal rounded-circle opacity-25"
@@ -376,16 +405,73 @@
         </div>
     </section>
 
-    <!-- Comparison Section -->
+    <!-- Premium Gallery Section -->
+    <section id="gallery" class="py-6 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5 reveal-up">
+                <span class="text-teal font-monospace text-uppercase small fw-bold tracking-wide">Superior
+                    Craftsmanship</span>
+                <h2 class="display-5 fw-bold mt-2 text-dark">Premium Quality Showcase</h2>
+                <p class="text-muted lead mx-auto" style="max-width: 700px;">Experience the precision and clarity of
+                    Krystal Aligners through our high-definition gallery.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Gallery Item 1 -->
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="rounded-4 overflow-hidden shadow-sm h-100 group-hover-zoom">
+                        <img src="photo_2026-03-10_16-36-14.jpg" class="img-fluid w-100 object-fit-cover hover-zoom-img"
+                            alt="Krystal Aligners Precision" style="height: 300px;">
+                    </div>
+                </div>
+                <!-- Gallery Item 2 -->
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 100ms;">
+                    <div class="rounded-4 overflow-hidden shadow-sm h-100 group-hover-zoom">
+                        <img src="photo_2026-03-10_16-36-08.jpg" class="img-fluid w-100 object-fit-cover hover-zoom-img"
+                            alt="Krystal Aligners Premium Case" style="height: 300px;">
+                    </div>
+                </div>
+                <!-- Gallery Item 3 -->
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 200ms;">
+                    <div class="rounded-4 overflow-hidden shadow-sm h-100 group-hover-zoom">
+                        <img src="photo_2026-03-10_16-36-03.jpg" class="img-fluid w-100 object-fit-cover hover-zoom-img"
+                            alt="Krystal Aligners Details" style="height: 300px;">
+                    </div>
+                </div>
+                <!-- Gallery Item 4 -->
+                <div class="col-lg-4 col-md-6 reveal-up">
+                    <div class="rounded-4 overflow-hidden shadow-sm h-100 group-hover-zoom">
+                        <img src="photo_2026-03-10_16-35-57.jpg" class="img-fluid w-100 object-fit-cover hover-zoom-img"
+                            alt="Krystal Aligners Clear Material" style="height: 300px;">
+                    </div>
+                </div>
+                <!-- Gallery Item 5 -->
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 100ms;">
+                    <div class="rounded-4 overflow-hidden shadow-sm h-100 group-hover-zoom">
+                        <img src="photo_2026-03-10_16-35-52.jpg" class="img-fluid w-100 object-fit-cover hover-zoom-img"
+                            alt="The invisible way to a krystal clear smile" style="height: 300px;">
+                    </div>
+                </div>
+                <!-- Gallery Item 6 -->
+                <div class="col-lg-4 col-md-6 reveal-up" style="transition-delay: 200ms;">
+                    <div class="rounded-4 overflow-hidden shadow-sm h-100 group-hover-zoom">
+                        <img src="photo_2026-03-10_11-50-48.jpg" class="img-fluid w-100 object-fit-cover hover-zoom-img"
+                            alt="Aligner Premium Selection" style="height: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="comparison" class="py-6 bg-light">
         <div class="container py-5">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-up">
                 <span class="text-teal font-monospace text-uppercase small fw-bold tracking-wide">Make the Smart
                     Choice</span>
                 <h2 class="display-5 fw-bold mt-2 text-dark">Krystal Clear Aligners vs. Braces</h2>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center reveal-up">
                 <div class="col-lg-10">
                     <div class="bg-white rounded-4 shadow-sm overflow-hidden border">
                         <!-- Header Row -->
@@ -444,7 +530,7 @@
                             <div class="col-4 p-4 bg-teal text-white border-start border-end border-teal border-opacity-25"
                                 style="border-right: 2px solid rgba(255,255,255,0.2) !important; border-left: 2px solid rgba(255,255,255,0.2) !important;">
                                 <i class="fa-solid fa-check-circle fs-3 mb-2"></i>
-                                <div class="fw-medium small">Easily Removable & Easy</div>
+                                <div class="fw-medium small">Easily Removable</div>
                             </div>
                             <div class="col-4 p-4 text-muted bg-light">
                                 <i class="fa-solid fa-xmark-circle fs-3 mb-2 opacity-50"></i>
@@ -455,7 +541,7 @@
                 </div>
             </div>
 
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 reveal-up">
                 <a href="#contact" class="btn btn-teal btn-lg rounded-pill px-5 shadow hover-scale">Switch to Krystal
                     Aligners</a>
             </div>
@@ -464,76 +550,116 @@
 
 
 
+    <!-- Smile Results Section -->
+    <section id="results" class="py-6 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <!-- Content Left -->
+                <div class="col-lg-6 reveal-left">
+                    <span class="text-teal font-monospace text-uppercase small fw-bold tracking-wide">Real
+                        Transformations</span>
+                    <h2 class="display-5 fw-bold mt-2 text-dark">Smile Success Stories</h2>
+                    <p class="lead text-secondary mb-4">See the incredible life-changing results achieved with Krystal
+                        Clear Aligners. Our advanced technology delivers precise and predictable smile corrections.</p>
+
+                    <div class="bg-light p-4 rounded-4 border-start border-4 border-teal mb-4">
+                        <p class="mb-0 fst-italic text-muted">"I never thought my smile could look this good in just 8
+                            months. The process was so easy and invisible!"</p>
+                        <footer class="blockquote-footer mt-2 mb-0">Patient Success Case #124</iframe></footer>
+                    </div>
+
+                    <a href="treatments.html" class="btn btn-teal rounded-pill px-5 hover-scale">View More Results</a>
+                </div>
+
+                <!-- Result Image Right -->
+                <div class="col-lg-6 reveal-right">
+                    <div class="d-flex flex-column gap-4">
+                        <div class="rounded-5 overflow-hidden shadow-lg border">
+                            <img src="photo_2026-03-10_11-50-10.jpg" alt="Smile Transformation Result 1"
+                                class="img-fluid w-100">
+                        </div>
+
+                    </div>
+                    <p class="text-center text-muted small mt-3 mb-0">Real clinical results showing before (top) and
+                        after (bottom)</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 reveal-up">
+                <a href="treatments.html" class="btn btn-outline-teal rounded-pill px-5 hover-scale">View More
+                    Results</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-6 bg-light overflow-hidden">
         <div class="container py-5">
-            <div class="text-center mb-5">
+            <div class="text-center mb-5 reveal-up">
                 <span class="text-teal font-monospace text-uppercase small fw-bold tracking-wide">Patient Success</span>
                 <h2 class="display-5 fw-bold mt-2 text-dark">Our Happy Patients</h2>
                 <p class="text-muted lead mx-auto" style="max-width: 600px;">Real stories from real patients who
                     transformed their smiles with Krystal Aligners.</p>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center reveal-up">
                 <div class="col-lg-8">
                     <div id="homeTestimonialCarousel"
                         class="carousel slide testimonial-carousel bg-white rounded-4 shadow-sm p-4 p-md-5"
                         data-bs-ride="carousel" data-bs-interval="3500">
                         <div class="carousel-inner text-center">
-                            <!-- Dr. Uma shankar -->
+                            <!-- Carousel Item 1 -->
                             <div class="carousel-item active">
-                                <img src="dr_umashankar.jpg" alt="Dr. Uma shankar" class="testimonial-avatar">
+                                <div class="text-teal mb-4">
+                                    <i class="fa-solid fa-quote-left display-4 opacity-25"></i>
+                                </div>
+                                <div class="text-warning mb-3">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i>
+                                </div>
+                                <h4 class="mb-3 fst-italic text-secondary">"Incredibly comfortable and invisible."</h4>
+                                <p class="lead text-muted mb-4">"The aligners are so comfortable and practically
+                                    invisible. I'm already seeing great results in just a few months of treatment."</p>
+                                <h6 class="fw-bold text-teal mb-0">Adarsh S.</h6>
+                            </div>
+
+                            <!-- Expert Testimonial 1 -->
+                            <div class="carousel-item">
+                                <div class="doctor-review-img-wrapper">
+                                    <img src="dr_arya.jpg" alt="Dr. Arya BDS" class="doctor-review-img">
+                                </div>
                                 <div class="text-warning mb-2">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i>
                                 </div>
-                                <h4 class="fw-bold text-dark mb-0">Dr. Uma shankar</h4>
-                                <p class="text-secondary small mb-3">BDS, General Dentist, Trivandrum</p>
-                                <div class="testimonial-quote-box mx-auto" style="max-width: 600px;">
-                                    <h5 class="mb-3 fst-italic">"Excellent Clinical Results"</h5>
-                                    <p class="lead mb-0">"Krystal Aligners provides the most predictable and
-                                        professional
-                                        clear aligner solutions for my patients. The support and quality are
-                                        exceptional."</p>
+                                <div class="testimonial-name-label">Dr. Arya</div>
+                                <div class="testimonial-desig-label">BDS · General Dentist · Trivandrum</div>
+                                <div class="doctor-quote-card">
+                                    <p class="mb-0 lead">"Krystal Aligners provides an exceptional level of precision.
+                                        The fully assisted service makes the entire process effortless for both doctors
+                                        and patients."</p>
                                 </div>
                             </div>
-                            <!-- Dr. Anoop S -->
+                            <!-- Expert Testimonial 2 -->
                             <div class="carousel-item">
-                                <div class="bg-blue-light text-teal rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                                    style="width: 120px; height: 120px; font-size: 3rem; border: 4px solid var(--clr-white); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                                    <i class="fa-solid fa-user-doctor"></i>
+                                <div class="doctor-review-img-wrapper">
+                                    <img src="dr_umashankar.jpg" alt="Dr. Uma Shankar BDS" class="doctor-review-img">
                                 </div>
                                 <div class="text-warning mb-2">
                                     <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i>
                                 </div>
-                                <h4 class="fw-bold text-dark mb-0">Dr. Anoop S</h4>
-                                <p class="text-secondary small mb-3">Chief Orthodontist · 15+ Yrs Experience</p>
-                                <div class="testimonial-quote-box mx-auto" style="max-width: 600px;">
-                                    <h5 class="mb-3 fst-italic">"Digital Precision"</h5>
-                                    <p class="lead mb-0">"We combine clinical expertise with advanced 3D technology to
-                                        ensure every patient achieves their dream smile with absolute confidence."</p>
-                                </div>
-                            </div>
-                            <!-- Dr. Archa -->
-                            <div class="carousel-item">
-                                <div class="bg-blue-light text-teal rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4"
-                                    style="width: 120px; height: 120px; font-size: 3rem; border: 4px solid var(--clr-white); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                                    <i class="fa-solid fa-award"></i>
-                                </div>
-                                <div class="text-warning mb-2">
-                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                                        class="fa-solid fa-star"></i>
-                                </div>
-                                <h4 class="fw-bold text-dark mb-0">Dr. Archa</h4>
-                                <p class="text-secondary small mb-3">Aligner Specialist · Invisalign Certified</p>
-                                <div class="testimonial-quote-box mx-auto" style="max-width: 600px;">
-                                    <h5 class="mb-3 fst-italic">"Certification Matters"</h5>
-                                    <p class="lead mb-0">"Our Invisalign certified approach ensures that you receive the
-                                        highest standard of care and the most comfortable aligner experience."</p>
+                                <div class="testimonial-name-label">Dr. Uma Shankar</div>
+                                <div class="testimonial-desig-label">BDS · General Dentist · Trivandrum</div>
+                                <div class="doctor-quote-card">
+                                    <p class="mb-0 lead">"I am really satisfied with the results I got for my patients
+                                        through krystal aligners. Achieved wonderful results for crowding as well as
+                                        spacing cases. Orthodontist himself came within a few days of contacting, for
+                                        doing IPR and Scanning. It is something I didn't get from any of the other labs
+                                        whom I contacted. I would say I am a happy customer of KRYSTAL ALIGNERS."</p>
                                 </div>
                             </div>
                         </div>
@@ -557,7 +683,7 @@
                 </div>
             </div>
 
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 reveal-up">
                 <a href="testimonials.html" class="btn btn-outline-teal rounded-pill px-5 hover-scale">Read More
                     Stories</a>
             </div>
@@ -569,7 +695,7 @@
         <div class="container py-5">
             <div class="row g-5 bg-white rounded-4 shadow-sm overflow-hidden p-0 m-0">
                 <!-- Left: Form -->
-                <div class="col-lg-6 p-4 p-md-5">
+                <div class="col-lg-6 p-4 p-md-5 reveal-up">
                     <span class="text-teal font-monospace text-uppercase small fw-bold tracking-wide">Get In
                         Touch</span>
                     <h2 class="display-6 fw-bold mt-2 mb-4 text-dark">Book Your Free Scan</h2>
@@ -600,7 +726,7 @@
                     </form>
                 </div>
                 <!-- Right: Map/Info -->
-                <div class="col-lg-6 p-0 position-relative" style="transition-delay: 200ms;">
+                <div class="col-lg-6 p-0 position-relative reveal-up" style="transition-delay: 200ms;">
                     <!-- Embedded Map Placeholder -->
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.335478465053!2d76.99747077590858!3d8.456519597711204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb11a91532a7%3A0xc27ea9ee9effe644!2sKRYSTAL%20ALIGNERS!5e0!3m2!1sen!2sin!4v1711234567890!5m2!1sen!2sin"
@@ -698,12 +824,16 @@
         <a href="tel:+918139815081" class="floating-btn btn-teal hover-scale" aria-label="Call Us">
             <i class="fa-solid fa-phone"></i>
         </a>
-
+        <a href="#" id="scrollTop" class="floating-btn bg-dark hover-scale"
+            style="opacity: 0; pointer-events: none; transition: 0.3s;" aria-label="Scroll to Top">
+            <i class="fa-solid fa-arrow-up border-0"></i>
+        </a>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- JavaScript with Cache Buster -->
+    <script src="script.js?v=1.2"></script>
 </body>
 
 </html>
